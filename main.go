@@ -97,7 +97,7 @@ func main() {
 				results[dstatLabels[i].section] = sectionResult
 			}
 
-			jsonStr, err := json.MarshalIndent(results, "", "\t")
+			jsonStr, err := json.Marshal(results)
 			if err != nil {
 				fmt.Println(err)
 			}
